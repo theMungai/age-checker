@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="age-container">
+        <h1> Age Calculator</h1>
+        <form action="">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" placeholder="First Name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+
+            <label for="id-number">Id(optional):</label>
+            <input type="number" id="id-number" placeholder="Id Number" required>
+
+            <label for="dob"> Date of Birth:</label>
+            <input type="date" name = "date" id="dob" placeholder="Date of Birth" required >
+
+            <input type="button" value="Submit" id="submit" onclick="ageChecker()" >
+        </form>
+
+    </main>
+
+    <div class="pop-up-modal" id="pop-up-modal">
+        <div class="modal-content">
+            <span class="close-modal"><i class="fa-solid fa-circle-xmark" onclick="hideModal()" id="hide-modal"></i></span>
+            <div id="age-message"></div>
+        </div>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
